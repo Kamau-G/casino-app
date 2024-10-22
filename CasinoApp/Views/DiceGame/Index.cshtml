@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Dice Game";
+}
+@model dynamic
+
+<div class="diceUI">
+    <h1 class="display-4">DiceGame</h1>
+    <div class="d-flex flex-row flex-wrap">
+        @{
+            int count = (TempData.ContainsKey("Count"))? (int)TempData["Count"]:0;
+            if (Model != null)
+        {
+            
+            foreach (var d in Model.Rolls) {
+                    <div class="cardUI col-1 text-center">@d</div>
+                    count += d;
+                } 
+            }
+        }
+    </div>
+    <div class="cardUI">
+        <div class="">Multiplier</div>
+        <div class="">
+            @{
+                // Make this more random to make the game more addicting
+                var multiplier = new Random().Next(1,10);
+                count *= multiplier;
+            }
+            @multiplier
+        </div>
+    </div>
+    <form class="d-flex flex-column" asp-controller="DiceGame" asp-action="Post" method="post">
+            <div>
+                <div class="cardUI">
+                    Hold:<input type="radio" id="hold" name="input" value="Hold" required>
+                </div>
+                <div class="cardUI">
+                    Play:<input type="radio" id="play" name="input" value="Play" required>
+                </div>
+            </div>
+        <input value=@count name="count" readonly>
+        <br />
+        <input type="submit" />
+    </form>
+    <br />
+    <div>Game Info</div>
+    @{
+        if (ViewData.ContainsKey("Message"))
+        {
+            <div >@ViewData["Message"]</div>
+        }
+        if (Model.isSaved != null)
+        {
+            <div>@Model.isSaved</div>
+        }
+    }
+</div>

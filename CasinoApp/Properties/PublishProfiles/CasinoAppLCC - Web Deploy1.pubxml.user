@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAXsymGuR37EaHs4yBYasPLQAAAAACAAAAAAAQZgAAAAEAACAAAACq/UAbHo8GihJCD9CCcVa8/C7WY65p+PUL0m4kVPhiTQAAAAAOgAAAAAIAACAAAAAEGgp4UFWTRLpzHkrUufpHWRo+N2g3+KC4N8KxTBZQe4AAAACbxT6au8mQ3XNuiyaGRCrTjRD3Civzmgrsab7pzXaB1Ow3rpaxWHrX5430/0ehS47w/BnoSCfC22ZjY8Jcpjw0aJfApdXyZtGgIFUARrqmTR2VCZ8ECLlmFwmvmr/f1iB0UAtiwcJ1ZsLRJCRGSE6pePsF6eJfXfqiQH86BdzKyUAAAAB+0D2mEt5VignHdjkCpuZqzllkpWkX/PR7E1YWzNfib7aHNybQLeiLWfKwxi5nt8PBAdWHPL7Eo4/Ddv/esY6s</EncryptedPassword>
+    <History>True|2024-03-18T22:41:22.4130152Z;True|2024-03-18T15:09:41.7486849-07:00;True|2024-03-18T14:04:53.1660533-07:00;True|2024-03-18T13:56:37.8902916-07:00;True|2024-03-17T22:50:02.8008696-07:00;True|2024-03-17T22:35:29.5822902-07:00;True|2024-03-17T22:29:44.7634676-07:00;True|2024-03-17T22:24:58.1160910-07:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="MySqlConnection">
+      <Value>Server=communitysiteazure.mysql.database.azure.com%3buser=Kgatson%3bPassword=8426842699713Kk%3bDatabase=casinoappdb%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

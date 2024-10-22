@@ -1,0 +1,114 @@
+﻿@{
+    ViewData["Title"] = "Admin Page";
+}
+
+@model AdminVM
+@{
+    if (TempData["Message"] != null)
+    {
+        <div class=" formUI col-7">
+            <h2 class="text-start">Console:</h2>
+            <span>@TempData["Message"]</span>
+        </div>
+    }
+}
+
+    <div class="cardUI">
+        <h2 class="text-start">Admins</h2>
+        <div class="row">
+            @{
+                foreach (var u in Model.Admins)
+                {
+                    <div class="col-2">
+                        <h2 class="">@u</h2>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+
+<div class="cardUI">
+    <h2 class="text-start">Users</h2>
+    <div class="row">
+        @{
+            foreach (var u in Model.Users)
+            {
+                <div class="col-2">
+                    <h2 class="">@u</h2>
+                </div>
+            }
+        }
+    </div>
+</div>
+<div class=" cardUI col-7">
+    <h2 class="text-start">Add Admin Area</h2>
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <form class="" method="post" asp-action="AddAdmin">
+        <div class="row mb-2">
+            <label class="col-form-label col-md-4">User Name:</label>
+            <div class="col-md-6">
+                <input name="name" class="form-control" />
+            </div>
+            <button type="submit" class="btnUI">Submit</button>
+        </div>
+    </form>
+</div>
+
+<div class=" cardUI col-7">
+    <h2 class="text-start">Remove Admin Area</h2>
+
+    <form class="" method="post" asp-action="RemoveAdmin">
+        <div class="row mb-2">
+            <label class="col-form-label col-md-4">User Name:</label>
+            <div class="col-md-6">
+                <input name="name" class="form-control" />
+            </div>
+            <button type="submit" class="btnUI">Submit</button>
+        </div>
+    </form>
+</div>
+
+<div class=" cardUI col-7">
+    <h2 class="text-start">Delete User Area</h2>
+
+    <form class="" method="post" asp-action="DeleteUser">
+        <div class="row mb-2">
+            <label class="col-form-label col-md-4">User Name:</label>
+            <div class="col-md-6">
+                <input name="name" class="form-control" />
+            </div>
+            <button type="submit" class="btnUI">Submit</button>
+        </div>
+    </form>
+</div>
+<div class=" cardUI col-7">
+    <h2 class="text-start">Delete Role Area</h2>
+
+    <form class="" method="post" asp-action="DeleteRole">
+        <div class="row">
+            <label class="col-form-label col-md-4">Role:</label>
+            <div class="col-md-6">
+                <input name="role" class="form-control" />
+            </div>
+            <button type="submit" class="btnUI mt-2">Submit</button>
+        </div>
+    </form>
+</div>
+<div class=" cardUI col-7">
+    <h2 class="text-start">Delete Message Area</h2>
+
+    <form class="" method="post" asp-action="DeleteMessage">
+        <div class="row">
+            <label class="col-form-label col-md-4">User Name:</label>
+            <div class="col-md-6">
+                <input name="role" class="form-control" />
+            </div>
+            <label class="col-form-label col-md-4">Message Id:</label>
+            <div class="col-md-6">
+                <input name="role" class="form-control" />
+            </div>
+            <button type="submit" class="btnUI mt-2">Submit</button>
+        </div>
+    </form>
+</div>
+</div>

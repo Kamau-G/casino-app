@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Detailed Message Page";
+}
+@model Message
+@{
+    TempData["MsgId"] = Model.MsgId;
+}
+<div class="">
+    <h2 class="">Message List</h2>
+    <div id="MsgList" class="cardUI">
+        @{
+            if (@Model != null)
+            {
+                <h2>@Model.Sndr.Name writes: </h2>
+                <div class="d-flex flex-row flex-wrap">
+                @Model.Text
+                </div>
+                
+            }
+            else
+            {
+                <div>ERROR No Message to show</div>
+            }
+        }
+    </div>
+    <br />
+    <h2>Reply List Area</h2>
+    <div class="cardUI">@{
+            if(Model.Replies.Any()){
+                Model.Replies.ForEach(async r =>{});
+                foreach (var r in Model.Replies)
+                {
+                    <div>@Html.DisplayName(r.Text);</div>
+                }
+            }else{<div>Nothing to Show</div>}
+               
+        }
+    </div>
+    <h2>Create Reply Area</h2>
+    <div class="text-center cardUI">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <br>
+        <form class="d-flex flex-column" asp-controller="MessagePage" asp-action="Reply" method="post">
+            <div class="d-flex flex-row mb-1">
+                <label class="col-4 form-label-sm" for="to">Recipient</label>
+                @{/*<input hidden class="col-8 form-control-sm" id="to" name="Rcpnt" value="@Model.Sndr" required></input>*/}
+                <input hidden class="col-8 form-control-sm" id="to" name="msgId" value="@Model.MsgId" required></input>
+            </div>
+            <div class="d-flex flex-row mb-1">
+                <label class="col-4 form-label-sm" for="from">Sender</label>
+                @{/*<input hidden class="col-8 form-control-sm" id="from" name="Sndr" value="@Model.Rcpnt" required></input>*/}
+            </div>
+            <div class="d-flex flex-row mb-1">
+                <label class="col-4 form-label-sm" for="text">Text</label>
+                <input class="col-8 form-control-sm" id="text" name="Text" required></input>
+            </div>
+            <input type="submit"></input>
+        </form>
+        <br>
+        <a class=" btnUI nav-link text-dark" asp-area="" asp-controller="MessagePage" asp-action="Index">Return</a>
+    </div>
+</div>

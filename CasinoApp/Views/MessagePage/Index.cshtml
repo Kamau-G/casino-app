@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Message List";
+}
+@model List<Message>
+@{
+}
+<div class="">
+    <h2 class="">Message List</h2>
+    <div id="MsgList" class="cardUI">
+        @{
+            if (@Model != null)
+            {
+                <h2>@Model.Count </h2>
+                <div class="d-flex flex-row flex-wrap">
+                
+                    @{
+                        if (Model.Count > 0)
+                        {
+                            int i = 0;
+                            foreach (var m in Model.ToList())
+                        {
+                            <div class="cardUI col-4">
+                            <div>Sender: @m.Sndr</div>
+                            <div>Text: @m.Text</div>
+                            </div>
+                                <form method="post" asp-controller="MessagePage" asp-action="DetailedMessage"><input hidden name="message" value="@m"><input hidden name="index" value="@i"></input><input type="submit" name="myInput" value="Details"></form>
+                                <form method="post" asp-controller="MessagePage" asp-action="DeleteMsg"><input hidden name="id" value="@Model[i].MsgId"></input><input type="submit" name="myInput" value="Delete"></form>
+
+                        i++;
+                        }
+                    }
+                    else
+                    {
+                        <div>No Messages to show</div>
+                    }
+                }
+                </div>
+                
+            }
+            else
+            {
+                <div>No Messages to show</div>
+            }
+        }
+    </div>
+    <br />
+    <h2>Create Message Area</h2>
+    <div class="text-center cardUI">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <br>
+        <form class="d-flex flex-column" asp-controller="MessagePage" asp-action="Post" method="post">
+            <div class="d-flex flex-row mb-1">
+                <label class="col-4 form-label-sm" for="to">To</label>
+                <input class="col-8 form-control-sm" id="to" name="Rcpnt" required></input>
+            </div>
+            <div class="d-flex flex-row mb-1">
+                <label class="col-4 form-label-sm" for="text">Text</label>
+                <input class="col-8 form-control-sm" id="text" name="Text" required></input>
+            </div>
+            <input type="submit"></input>
+        </form>
+        @{
+            if (TempData.ContainsKey("MsgStatus"))
+            {
+            <div class="cardUI">@TempData["MsgStatus"]</div>    
+            }
+        }
+        <br>
+    </div>
+</div>

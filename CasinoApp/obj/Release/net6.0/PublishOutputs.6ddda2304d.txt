@@ -1,0 +1,13 @@
+D:\CS295N\GitRepos\CS295NLabs\CasinoApp\bin\Release\net6.0\publish\CasinoApp.exe
+D:\CS295N\GitRepos\CS295NLabs\CasinoApp\bin\Release\net6.0\publish\appsettings.Development.json
+D:\CS295N\GitRepos\CS295NLabs\CasinoApp\bin\Release\net6.0\publish\appsettings.json
+D:\CS295N\GitRepos\CS295NLabs\CasinoApp\bin\Release\net6.0\publish\appsettings.Production.json
+D:\CS295N\GitRepos\CS295NLabs\CasinoApp\bin\Release\net6.0\publish\CasinoApp.dll
+D:\CS295N\GitRepos\CS295NLabs\CasinoApp\bin\Release\net6.0\publish\CasinoApp.runtimeconfig.json
+D:\CS295N\GitRepos\CS295NLabs\CasinoApp\bin\Release\net6.0\publish\CasinoApp.pdb
+D:\CS295N\GitRepos\CS295NLabs\CasinoApp\bin\Release\net6.0\publish\Microsoft.EntityFrameworkCore.dll
+D:\CS295N\GitRepos\CS295NLabs\CasinoApp\bin\Release\net6.0\publish\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\CS295N\GitRepos\CS295NLabs\CasinoApp\bin\Release\net6.0\publish\Microsoft.EntityFrameworkCore.Relational.dll
+D:\CS295N\GitRepos\CS295NLabs\CasinoApp\bin\Release\net6.0\publish\MySqlConnector.dll
+D:\CS295N\GitRepos\CS295NLabs\CasinoApp\bin\Release\net6.0\publish\Pomelo.EntityFrameworkCore.MySql.dll
+D:\CS295N\GitRepos\CS295NLabs\CasinoApp\bin\Release\net6.0\publish\CasinoApp.deps.json
