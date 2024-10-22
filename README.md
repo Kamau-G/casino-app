@@ -1,2 +1,2 @@
-# CS295NLabs
-Lane CC ASPEN.NET
+# Casino APP
+. Net Core App
