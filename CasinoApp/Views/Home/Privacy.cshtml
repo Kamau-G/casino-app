@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "User Registry";
+}
+@model AppUser
+<h1>@ViewData["Title"]</h1>
+
+<div class="text-center cardUI">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <br>
+    <form class="d-flex flex-column" asp-controller="Home" asp-action="Privacy" method="post">
+        <div class="d-flex flex-row mb-1">
+            <label class="col-4 form-label-sm" for="to">Name</label>
+            <input class="col-8 form-control-sm" id="to" name="Name" required></input>
+        </div>
+        <div class="d-flex flex-row mb-1">
+            <label class="col-4 form-label-sm" for="from">Password</label>
+            <input class="col-8 form-control-sm" id="from" name="Password" required></input>
+        </div>
+        <input type="submit"></input>
+    </form>
+    <br>
+    <a class=" btnUI nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Return Home</a>
+    @{
+        if (Model!=null)
+        {
+            <div>Information Saved</div>
+        }
+    }
+</div>

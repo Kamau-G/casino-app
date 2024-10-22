@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Leader Board";
+}
+@model List<DiceGameScore>
+<div class="">
+    <h1 class="display-4">Leader Board</h1>
+    <div class="d-flex flex-row flex-wrap diceUI">
+    @{
+            if (ViewBag.User != null)
+            {
+                int i = 1;
+                <h1 class="col-12">@ViewBag.User.Name</h1>
+            foreach (var m in Model)
+            {
+                    <div class="cardUI col-8"><strong>Score #@i : @m.Score</strong>   @m.Player.UserName</div>
+                i++;
+            }
+        }
+    }
+    @{
+        if (ViewBag.User == null)
+        {
+            if (Model != null)
+            {
+                int i = 1;
+                foreach (var m in Model)
+                {
+                    <div class="col-8 cardUI">Rank #@i : @m.Score</div>
+                    i++;
+                }
+            }
+        }
+    }
+    </div>
+    <br />
+    <div class="diceUI">
+    <h2>Search Area</h2>
+    <form method="post">
+        <label>Search Name:</label> <input name="userName" />
+        @* <label>To</label> <input /> *@
+
+        <input type="submit" />
+    </form>
+    </div>
+    <br />
+    <div>Info:</div>
+</div>

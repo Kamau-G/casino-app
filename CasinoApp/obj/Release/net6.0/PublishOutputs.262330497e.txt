@@ -1,0 +1,13 @@
+D:\CS295N\GitRepos\CS295NLabs\CasinoApp\obj\Release\net6.0\PubTmp\Out\CasinoApp.exe
+D:\CS295N\GitRepos\CS295NLabs\CasinoApp\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+D:\CS295N\GitRepos\CS295NLabs\CasinoApp\obj\Release\net6.0\PubTmp\Out\appsettings.json
+D:\CS295N\GitRepos\CS295NLabs\CasinoApp\obj\Release\net6.0\PubTmp\Out\appsettings.Production.json
+D:\CS295N\GitRepos\CS295NLabs\CasinoApp\obj\Release\net6.0\PubTmp\Out\CasinoApp.dll
+D:\CS295N\GitRepos\CS295NLabs\CasinoApp\obj\Release\net6.0\PubTmp\Out\CasinoApp.runtimeconfig.json
+D:\CS295N\GitRepos\CS295NLabs\CasinoApp\obj\Release\net6.0\PubTmp\Out\CasinoApp.pdb
+D:\CS295N\GitRepos\CS295NLabs\CasinoApp\obj\Release\net6.0\PubTmp\Out\Microsoft.EntityFrameworkCore.dll
+D:\CS295N\GitRepos\CS295NLabs\CasinoApp\obj\Release\net6.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\CS295N\GitRepos\CS295NLabs\CasinoApp\obj\Release\net6.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Relational.dll
+D:\CS295N\GitRepos\CS295NLabs\CasinoApp\obj\Release\net6.0\PubTmp\Out\MySqlConnector.dll
+D:\CS295N\GitRepos\CS295NLabs\CasinoApp\obj\Release\net6.0\PubTmp\Out\Pomelo.EntityFrameworkCore.MySql.dll
+D:\CS295N\GitRepos\CS295NLabs\CasinoApp\obj\Release\net6.0\PubTmp\Out\CasinoApp.deps.json

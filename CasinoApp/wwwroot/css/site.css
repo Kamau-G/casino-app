@@ -1,0 +1,133 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background: #ffffff url(https://i.gifer.com/1PZ1.gif) center center/cover no-repeat;
+    // background: linear-gradient(25deg, #f5f6f4 25%, #a99270 95%);
+}
+.cardUI {
+    /* min-width: 100px; */
+    padding: 1.25%;
+    margin: 1%;
+    border: .05em solid #303030f5;
+    /* border: 1px solid #303030f5; */
+    border-radius: 10px;
+    /* background-color: #838383d7; */
+    background-color: #faf6f094;
+    box-shadow: 2px 2.5px 5px 1px #000000;
+}
+
+.formUI {
+    /* min-width: 100px; */
+    flex-shrink: 1;
+    padding: 10px;
+    border: .15em solid #303030f5;
+    border-radius: 20px;
+    background-color: #838383d7;
+    text-align: center;
+    box-shadow: 2px 2.5px 5px 1px #000000;
+}
+
+form label {
+    border: .05em solid #252525e5;
+    background: linear-gradient(0deg, #dfe9de 0%, #aec6a0 100%);
+    text-align: start;
+    border-radius: 5px 0px 0px 0px;
+    box-shadow: 2px 2.5px 5px 1px #000000;
+}
+
+form input {
+    border: .05em solid #252525e5;
+    text-align: left;
+    border-radius: 0px 0px 5px 0px;
+    box-shadow: 2px 2.5px 5px 1px #000000;
+}
+
+    form input[type="submit"] {
+        background-color: #ffc55bbd;
+    }
+
+        form input[type="submit"]:hover {
+            background-color: rgb(166, 196, 251);
+        }
+
+.btnUI:hover {
+    background-color: rgb(166, 196, 251);
+}
+
+.btnUI {
+    /* min-width: 100px; */
+    flex-shrink: 1;
+    border: .05em solid #252525e5;
+    border-radius: 10px;
+    background-color: #668b669c;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 2px 2.5px 5px 1px #000000;
+}
+
+.ledgerUI {
+    /* min-width: 100px; */
+    flex-shrink: 1;
+    padding: 10px;
+    border: .05em solid #303030f5;
+    border-radius: 20px;
+    background-color: #668b669c;
+    text-align: center;
+    box-shadow: 2px 2.5px 5px 1px #000000;
+}
+
+.textUI {
+    /* min-width: 100px; */
+    flex-shrink: 1;
+    padding: 10px;
+    border: .05em solid #303030f5;
+    border-radius: 10px;
+    background: linear-gradient(0deg, #888588 10%, #f5f6f4 50%, #888588 90%);
+    box-shadow: 2px 2.5px 5px 1px #000000;
+}
+.diceUI {
+    padding: 10px;
+    border: .05em solid #303030f5;
+    border-radius: 10px;
+    background: linear-gradient(0deg, #668b669c 0%,#eae0d5 100%);
+    box-shadow: 2px 2.5px 5px 1px #000000;
+}
+.leaderUI {
+    padding: 10px;
+    border: .05em solid #303030f5;
+    border-radius: 10px;
+    background: linear-gradient(0deg, #a99270 0%, #f5c53b 80%);
+    box-shadow: 2px 2.5px 5px 1px #000000;
+}
+.navbackground {
+    /*background: linear-gradient(25deg, #f5f6f4 25%, #a99270 95%);*/
+    opacity: 80%;
+}
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
+}
+UpGif {
+    background-image: url("../images/UpGif.gif");
+}
+XoutGif {
+    background-image: url("../images/XoutGif.gif");
+}

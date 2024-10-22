@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Create Message Page";
+}
+<div class="">
+    <h2 class="">Message List</h2>
+    <div id="MsgList" class="cardUI">
+        @{
+            if (@Model != null)
+            {
+                <h2>@Model.Count </h2>
+                <div class="d-flex flex-row flex-wrap">
+                
+                @{
+                        if (Model.Count > 0)
+                    {
+                        foreach (var m in Model.ToList())
+                        {
+                            <div class="cardUI col-4">
+                            <div>Sender: @m.Sndr</div>
+                            <div>Text: @m.Text</div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div>No Messages to show</div>
+                    }
+                }
+                </div>
+                
+            }
+            else
+            {
+                <div>No Messages to show</div>
+            }
+        }
+    </div>
+    <br />
+    <h2>Create Message Area</h2>
+    <div class="text-center cardUI">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <br>
+        <form class="d-flex flex-column" asp-controller="MessagePage" asp-action="Post" method="post">
+            <div class="d-flex flex-row mb-1">
+                <label class="col-4 form-label-sm" for="to">To</label>
+                <input class="col-8 form-control-sm" id="to" name="To.Name" required></input>
+            </div>
+            <div class="d-flex flex-row mb-1">
+                <label class="col-4 form-label-sm" for="from">From</label>
+                <input class="col-8 form-control-sm" id="from" name="From" required></input>
+            </div>
+            <div class="d-flex flex-row mb-1">
+                <label class="col-4 form-label-sm" for="subject">Subject</label>
+                <input class="col-8 form-control-sm" id="subject" name="Subject" required></input>
+            </div>
+            <div class="d-flex flex-row mb-1">
+                <label class="col-4 form-label-sm" for="text">Text</label>
+                <input class="col-8 form-control-sm" id="text" name="Text" required></input>
+            </div>
+            <input type="submit"></input>
+        </form>
+        <br>
+        <a class=" btnUI nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Return Home</a>
+    </div>
+</div>

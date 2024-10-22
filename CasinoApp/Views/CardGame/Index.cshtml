@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Card Game";
+}
+@model List<Card>
+@{
+    int cardValue = 0;
+}
+<div class="">
+    <h1 class="display-4">CardGame</h1>
+    <div id="CardList" class="d-flex flex-row flex-wrap">
+        @{if(Model.Any()){
+            foreach (var c in Model)
+            {
+
+                <div class="cardUI col-4">
+                <h2 class="display-4">Card:</h2>                
+                @c.ToString()</div>
+                cardValue += c.Value;
+            }
+        }
+        }
+        <form class="d-flex flex-column" asp-controller="CardGame" asp-action="PlayCardGame" method="post">
+            <div>
+                <div class="cardUI">
+                    <strong>Higher:</strong><input type="radio" id="higer" name="input" value="1" required>
+                </div>
+                <div class="cardUI">
+                    <strong>Lower:</strong><input type="radio" id="lower" name="input" value="0" required>
+                </div>
+            </div>
+            <input type="number" placeholder="Input Wager" name="wager" required>
+            <br />
+            <input type="submit" />
+        </form>
+        <div class="cardUI"><strong>Value to beat:</strong> @cardValue</div>
+    </div>
+    <div class="cardUI">
+    <strong>Game Info:&nbsp;</strong>
+        @{if(@TempData.ContainsKey("Message")){ @TempData["Message"];}}
+    </div>
+</div>
